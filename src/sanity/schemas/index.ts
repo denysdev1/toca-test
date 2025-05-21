@@ -1,9 +1,18 @@
 import headerNav from './documents/headerNav';
-import page from './documents/page';
+import homePage from './documents/homePage';
 import route from './documents/route';
+import featuredContentSection from './objects/featuredContentSection';
+import heroSection from './objects/heroSection';
 import sanityLink from './objects/sanityLink';
-import { sections } from './sections';
 
-const objects = [...sections, sanityLink];
-const documents = [page, route, headerNav];
-export const schemaTypes = [...objects, ...documents];
+export const schemaTypes = [
+  // Documents
+  headerNav,
+  homePage,
+  route,
+
+  // Objects
+  featuredContentSection,
+  heroSection,
+  sanityLink,
+];

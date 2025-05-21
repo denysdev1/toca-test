@@ -48,9 +48,36 @@ type BaseSection = {
   _key: string;
 };
 
+export type HeroSection = BaseSection & {
+  _type: 'heroSection';
+  heading: string;
+  subheading?: string;
+  backgroundImage: SanityImage;
+  cta?: {
+    text: string;
+    url: string;
+  };
+};
+
+export type FeaturedItem = {
+  title: string;
+  description?: string;
+  image: SanityImage;
+  cta?: {
+    text: string;
+    url: string;
+  };
+};
+
+export type FeaturedContentSection = BaseSection & {
+  _type: 'featuredContentSection';
+  heading: string;
+  items: FeaturedItem[];
+};
+
 type HomeHeroSection = BaseSection & {
   _type: 'homeHeroSection';
   backgroundImage: SanityImage;
 };
 
-export type Section = HomeHeroSection;
+export type Section = HomeHeroSection | HeroSection | FeaturedContentSection;

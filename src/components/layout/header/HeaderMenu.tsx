@@ -4,8 +4,10 @@ import { extractUrl } from '@/libs/functions';
 import type { HeaderNav } from '@/sanity/types';
 import Link from 'next/link';
 
-export default function HeaderMenu({ data }: { data: HeaderNav }) {
-  const { backgroundImage, mainNav, secondaryNav } = data;
+export default function HeaderMenu({ data }: { data: HeaderNav | null }) {
+  if (!data) return null;
+
+  const { backgroundImage, mainNav = [], secondaryNav = [] } = data;
 
   return (
     <nav className='relative h-full bg-black'>
@@ -42,7 +44,13 @@ export default function HeaderMenu({ data }: { data: HeaderNav }) {
           </div>
         </Container>
       </div>
-      <SanityImageBlock fill image={backgroundImage} className='z-0 object-cover opacity-40' />
+      {backgroundImage && (
+        <SanityImageBlock
+          fill
+          image={backgroundImage}
+          className='z-0 object-cover opacity-40'
+        />
+      )}
     </nav>
   );
 }
