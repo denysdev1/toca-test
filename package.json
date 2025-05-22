@@ -13,17 +13,18 @@
     "@sanity/client": "^7.0.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.88.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "fitty": "^2.4.2",
     "jotai": "^2.12.2",
-    "lucide-react": "^0.510.0",
+    "lucide-react": "^0.511.0",
     "next": "15.2.4",
     "next-sanity": "^9.10.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "styled-components": "^6.1.15",
-    "tailwind-merge": "^3.2.0"
+    "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -38,6 +39,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sanity": "^3.89.0",
     "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.0",
     "typescript": "^5"
   }
 }
