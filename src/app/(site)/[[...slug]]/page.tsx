@@ -16,11 +16,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug?: string[] }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug } = await params;
 
   const route: Route = await sanityFetch({
@@ -38,12 +34,8 @@ export default async function Page({
   }
 
   return (
-    <main className='container mx-auto'>
-      <>
-        {route.page.sections?.map((section, index) => (
-          <SectionRenderer key={index} section={section} />
-        ))}
-      </>
+    <main className='mx-auto text-white'>
+      <>{route.page.sections?.map((section, index) => <SectionRenderer key={index} section={section} />)}</>
     </main>
   );
 }

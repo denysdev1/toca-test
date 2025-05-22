@@ -71,4 +71,14 @@ type HomeHeroSection = BaseSection & {
   backgroundImage: SanityImage;
 };
 
-export type Section = HomeHeroSection | FooterSection;
+export type NewsletterFormSection = BaseSection & {
+  _type: 'newsletterForm';
+  heading: string;
+  subheading: string;
+  emailPlaceholder: string;
+  selectPlaceholder: string;
+  locations: string[];
+  submitButtonText: string;
+};
+
+export type Section = HomeHeroSection | FooterSection | NewsletterFormSection;

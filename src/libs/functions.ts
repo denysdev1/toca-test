@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function normalizeSlug(slug?: string | string[]) {
-  if (!slug) {
+  if (!slug || slug === '/') {
     return '/';
   }
 
