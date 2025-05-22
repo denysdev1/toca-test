@@ -12,7 +12,7 @@ const footer = defineType({
       of: [{ type: 'sanityLink' }],
     },
     {
-      name: 'websiteInfoUrls',
+      name: 'websiteInfoLinks',
       title: 'Website Info Links',
       type: 'array',
       of: [{ type: 'sanityLink' }],

@@ -61,7 +61,7 @@ export type FeaturedItem = {
 export type FooterSection = BaseSection & {
   _type: 'footer';
   links: SanityLink[];
-  websiteInfoUrls: SanityLink[];
+  websiteInfoLinks: SanityLink[];
   instagramUrl: string;
   noble33Url: string;
 };
