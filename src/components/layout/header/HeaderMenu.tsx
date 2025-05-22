@@ -4,11 +4,11 @@ import { extractUrl } from '@/libs/functions';
 import type { HeaderNav } from '@/sanity/types';
 import Link from 'next/link';
 
-export default function HeaderMenu({ data }: { data: HeaderNav | null }) {
-  if (!data) return null;
-
-  const { backgroundImage, mainNav = [], secondaryNav = [] } = data;
-
+export default function HeaderMenu({
+  backgroundImage,
+  mainNav = [],
+  secondaryNav = [],
+}: HeaderNav) {
   return (
     <nav className='relative h-full bg-black'>
       <div className='relative z-20 h-full w-full'>

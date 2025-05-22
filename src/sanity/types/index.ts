@@ -48,17 +48,6 @@ type BaseSection = {
   _key: string;
 };
 
-export type HeroSection = BaseSection & {
-  _type: 'heroSection';
-  heading: string;
-  subheading?: string;
-  backgroundImage: SanityImage;
-  cta?: {
-    text: string;
-    url: string;
-  };
-};
-
 export type FeaturedItem = {
   title: string;
   description?: string;
@@ -69,10 +58,12 @@ export type FeaturedItem = {
   };
 };
 
-export type FeaturedContentSection = BaseSection & {
-  _type: 'featuredContentSection';
-  heading: string;
-  items: FeaturedItem[];
+export type FooterSection = BaseSection & {
+  _type: 'footer';
+  links: SanityLink[];
+  websiteInfoUrls: SanityLink[];
+  instagramUrl: string;
+  noble33Url: string;
 };
 
 type HomeHeroSection = BaseSection & {
@@ -80,4 +71,4 @@ type HomeHeroSection = BaseSection & {
   backgroundImage: SanityImage;
 };
 
-export type Section = HomeHeroSection | HeroSection | FeaturedContentSection;
+export type Section = HomeHeroSection | FooterSection;

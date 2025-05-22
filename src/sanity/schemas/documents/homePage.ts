@@ -15,11 +15,7 @@ export default defineType({
       name: 'sections',
       title: 'Page Sections',
       type: 'array',
-      of: [
-        { type: 'heroSection' },
-        { type: 'featuredContentSection' },
-        // Add more section types as needed
-      ],
+      of: [{ type: 'homeHeroSection' }, { type: 'footer' }],
     },
   ],
 });
