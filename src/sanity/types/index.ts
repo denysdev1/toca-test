@@ -66,9 +66,10 @@ export type FooterSection = BaseSection & {
   noble33Url: string;
 };
 
-type HomeHeroSection = BaseSection & {
+export type HomeHeroSection = BaseSection & {
   _type: 'homeHeroSection';
   backgroundImage: SanityImage;
+  heading: string;
 };
 
 export type NewsletterFormSection = BaseSection & {

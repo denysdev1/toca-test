@@ -18,6 +18,11 @@ const homeHeroSection = defineType({
         },
       ],
     },
+    {
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+    },
   ],
   preview: {
     prepare() {
