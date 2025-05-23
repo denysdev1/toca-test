@@ -82,4 +82,15 @@ export type NewsletterFormSection = BaseSection & {
   submitButtonText: string;
 };
 
+export type LocationsSection = BaseSection & {
+  _type: 'locations';
+  heading: string;
+  locations: {
+    heading: string;
+    name: string;
+    buttonText: string;
+    image: SanityImage;
+  }[];
+};
+
 export type Section = HomeHeroSection | FooterSection | NewsletterFormSection;
