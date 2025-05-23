@@ -3,7 +3,7 @@ import SanityImageBlock from '../utility/SanityImageBlock';
 
 export default function HomeHeroSection({ backgroundImage, heading }: HomeHeroSection) {
   return (
-    <section className='relative'>
+    <section className='relative mx-auto max-w-[1800px]'>
       <SanityImageBlock
         priority
         image={backgroundImage}

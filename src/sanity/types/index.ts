@@ -93,4 +93,12 @@ export type LocationsSection = BaseSection & {
   }[];
 };
 
-export type Section = HomeHeroSection | FooterSection | NewsletterFormSection;
+export type TuesdayPromoSection = BaseSection & {
+  _type: 'tuesdayPromo';
+  heading: string;
+  subheading: string;
+  image: SanityImage;
+  buttonText: string;
+};
+
+export type Section = HomeHeroSection | FooterSection | NewsletterFormSection | TuesdayPromoSection;
