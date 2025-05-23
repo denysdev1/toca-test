@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Toca Website
+
+[DEMO](https://toca-test-six.vercel.app/)
+
+A modern, responsive website built with Next.js 15 and Sanity CMS. This project features dynamic content management, beautiful UI components, and a custom admin interface.
+
+## Features
+
+- 🚀 Built with Next.js 15 and React 19
+- 📝 Sanity CMS integration for content management
+- 🎨 Custom UI components with Tailwind CSS
+- 🖼️ Optimized image handling with next/image and Sanity Image URL builder
+- 📱 Fully responsive design
+- 🎠 Interactive carousels using Embla Carousel
+- 💅 Custom fonts (Brandon Grotesque and Karl Geoff)
+- ⚡ Turbopack for fast development experience
+
+## Prerequisites
+
+- Node.js 18 or later
+- Bun (recommended) or npm/pnpm
+- Sanity account and project credentials
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
 
 ```bash
-npm run dev
+pnpm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Create a `.env.local` file in the root directory with your Sanity credentials:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Start the development server:
 
-## Learn More
+```bash
+pnpm dev
+# or
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+The site will be available at [http://localhost:3000](http://localhost:3000).
+The Sanity Studio will be available at [http://localhost:3000/admin](http://localhost:3000/admin).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app` - Next.js app router pages and layouts
+- `src/components` - React components organized by category
+  - `layout` - Layout components including header and navigation
+  - `sections` - Main content section components
+  - `ui` - Reusable UI components
+  - `utility` - Utility components and helpers
+- `src/sanity` - Sanity CMS configuration and schemas
+- `src/styles` - Global styles and Tailwind configuration
+- `public` - Static assets
 
-## Deploy on Vercel
+## Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `pnpm dev` - Start development server with Turbopack
+- `pnpm build` - Build the production application
+- `pnpm start` - Start the production server
+- `pnpm lint` - Run ESLint
