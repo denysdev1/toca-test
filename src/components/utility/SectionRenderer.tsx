@@ -1,6 +1,7 @@
 import type { Page } from '@/sanity/types';
 import Footer from '../sections/Footer';
 import HomeHeroSection from '../sections/HomeHeroSection';
+import InstaPromoSection from '../sections/InstaPromoSection';
 import LocationsSection from '../sections/LocationsSection';
 import MainPromo from '../sections/MainPromo';
 import NewsletterForm from '../sections/NewsletterForm';
@@ -15,6 +16,7 @@ const sections = {
   mainPromo: MainPromo,
   storyMenu: StoryMenu,
   signatureCocktailsSection: SignatureCocktailsSection,
+  instaPromo: InstaPromoSection,
 };
 
 export function SectionRenderer({ section }: { section: Page['sections'][number] }) {

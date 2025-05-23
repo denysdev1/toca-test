@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -99,7 +99,7 @@
 }
 
 body {
-  @apply bg-background text-foreground font-sans;
+  @apply bg-background text-foreground overflow-x-hidden font-sans;
 }
 
 .dark {

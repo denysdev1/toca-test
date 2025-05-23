@@ -8,7 +8,7 @@ import React from 'react';
 export default function Footer({ links, ...section }: FooterSection) {
   return (
     <footer className='relative w-full py-[50px] text-white'>
-      <div className='flex flex-col gap-[50px]'>
+      <div className='mx-auto flex max-w-[1800px] flex-col gap-[50px]'>
         <LinksColumns links={links} />
         <AdditionalInfo {...section} />
       </div>
@@ -40,7 +40,7 @@ const AdditionalInfo = ({ websiteInfoLinks, instagramUrl, noble33Url }: Omit<Foo
   );
 
   return (
-    <div className='container mx-auto flex flex-col gap-5 px-5 uppercase'>
+    <div className='flex max-w-[1800px] flex-col gap-5 px-5 uppercase'>
       <div className='lg:hidden'>{websiteLinks}</div>
       {(instagramUrl || noble33Url) && (
         <div className='flex items-center justify-between'>

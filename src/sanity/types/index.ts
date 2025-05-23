@@ -129,4 +129,12 @@ export type SignatureCocktailsSection = BaseSection & {
   backgroundImage: SanityImage;
 };
 
+export type InstaPromoSection = BaseSection & {
+  _type: 'instaPromo';
+  heading: string;
+  subheading: string;
+  images: SanityImage[];
+  instagramHandle: string;
+};
+
 export type Section = HomeHeroSection | FooterSection | NewsletterFormSection | TuesdayPromoSection;
