@@ -8,7 +8,6 @@ export default function SignatureCocktailsSection({
   subheading,
   cocktails,
   buttonText = 'LEARN MORE',
-  backgroundImage,
 }: SignatureCocktailsSection) {
   return (
     <section className='relative mx-auto mt-[78px] max-w-[1800px] pb-[125px] text-center lg:mt-[88px]'>
