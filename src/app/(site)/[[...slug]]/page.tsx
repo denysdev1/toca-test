@@ -11,7 +11,7 @@ export async function generateStaticParams() {
     tags: ['route'],
   });
 
-  return routes.map((route) => ({
+  return routes?.map((route) => ({
     slug: splitSlug(route.slug.current),
   }));
 }
