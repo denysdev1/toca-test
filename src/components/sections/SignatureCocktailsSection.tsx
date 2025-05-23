@@ -21,21 +21,30 @@ export default function SignatureCocktailsSection({
       <Button variant='blurred' className='mb-[66px]'>
         {buttonText}
       </Button>
-      <div className='flex justify-center gap-3'>
-        <Carousel>
-          <CarouselContent>
-            {cocktails.map((cocktail, i) => (
-              <CarouselItem
-                key={cocktail.name}
-                className={`relative max-h-[540px] max-w-[360px] basis-[70%] pb-[48px]`}
-              >
-                <SanityImageBlock image={cocktail.image} className='h-full w-full rounded-2xl object-cover' />
+
+      <Carousel
+        opts={{
+          align: 'center',
+          loop: true,
+        }}
+        className='mx-auto w-full max-w-[1500px]'
+      >
+        <CarouselContent className='-ml-2 md:-ml-4'>
+          {cocktails.map((cocktail) => (
+            <CarouselItem
+              key={cocktail.name}
+              className='basis-[280px] pl-2 md:basis-[320px] md:pl-4 lg:basis-1/3 2xl:basis-1/4'
+            >
+              <div className='relative mx-auto max-w-[360px] pb-[48px]'>
+                <div className='mb-4 h-[400px] lg:h-[480px]'>
+                  <SanityImageBlock image={cocktail.image} className='h-full w-full rounded-2xl object-cover' />
+                </div>
                 <p className='font-karl text-rose-gold text-[64px] leading-[100%]'>{cocktail.name}</p>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
     </section>
   );
 }
