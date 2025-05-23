@@ -13,9 +13,9 @@ export default function HomeHeroSection({ backgroundImage, heading }: HomeHeroSe
         <div className='absolute right-0 bottom-[180px] left-1/2 flex w-fit -translate-x-1/2 flex-col items-center justify-center lg:-bottom-[185px]'>
           {heading.split(' ').map((word, i) => (
             <div key={word} className='flex items-center font-serif text-[48.85px] leading-[100%] lg:text-[140px]'>
-              {i === 1 && <div className='ml-[10px] h-[1px] w-[112px] bg-[#C5A288] lg:w-80'></div>}
+              {i === 1 && <div className='bg-rose-gold ml-[10px] h-[1px] w-[112px] lg:w-80'></div>}
               {word}
-              {i === 0 && <div className='ml-[10px] h-[1px] w-[112px] bg-[#C5A288] lg:w-80'></div>}
+              {i === 0 && <div className='bg-rose-gold ml-[10px] h-[1px] w-[112px] lg:w-80'></div>}
             </div>
           ))}
         </div>

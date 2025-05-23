@@ -117,4 +117,16 @@ export type StoryMenuSection = BaseSection & {
   };
 };
 
+export type SignatureCocktailsSection = BaseSection & {
+  _type: 'signatureCocktails';
+  heading: string;
+  subheading: string;
+  cocktails: {
+    name: string;
+    image: SanityImage;
+  }[];
+  buttonText: string;
+  backgroundImage: SanityImage;
+};
+
 export type Section = HomeHeroSection | FooterSection | NewsletterFormSection | TuesdayPromoSection;

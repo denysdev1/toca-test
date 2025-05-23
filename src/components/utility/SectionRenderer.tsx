@@ -4,6 +4,7 @@ import HomeHeroSection from '../sections/HomeHeroSection';
 import LocationsSection from '../sections/LocationsSection';
 import MainPromo from '../sections/MainPromo';
 import NewsletterForm from '../sections/NewsletterForm';
+import SignatureCocktailsSection from '../sections/SignatureCocktailsSection';
 import StoryMenu from '../sections/StoryMenu';
 
 const sections = {
@@ -13,6 +14,7 @@ const sections = {
   locationsSection: LocationsSection,
   mainPromo: MainPromo,
   storyMenu: StoryMenu,
+  signatureCocktailsSection: SignatureCocktailsSection,
 };
 
 export function SectionRenderer({ section }: { section: Page['sections'][number] }) {
