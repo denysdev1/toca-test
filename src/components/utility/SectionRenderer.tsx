@@ -22,6 +22,7 @@ const sections = {
 export function SectionRenderer({ section }: { section: Page['sections'][number] }) {
   const { _type } = section;
 
+  // @ts-expect-error expected
   const SectionComponent = sections[_type];
 
   if (!SectionComponent) {

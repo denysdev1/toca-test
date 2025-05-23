@@ -137,4 +137,12 @@ export type InstaPromoSection = BaseSection & {
   instagramHandle: string;
 };
 
-export type Section = HomeHeroSection | FooterSection | NewsletterFormSection | TuesdayPromoSection;
+export type Section =
+  | HomeHeroSection
+  | FooterSection
+  | NewsletterFormSection
+  | TuesdayPromoSection
+  | StoryMenuSection
+  | SignatureCocktailsSection
+  | InstaPromoSection
+  | LocationsSection;
