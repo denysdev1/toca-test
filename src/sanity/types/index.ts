@@ -101,4 +101,20 @@ export type TuesdayPromoSection = BaseSection & {
   buttonText: string;
 };
 
+export type StoryMenuSection = BaseSection & {
+  _type: 'storyMenu';
+  story: {
+    heading: string;
+    subheading: string;
+    image: SanityImage;
+    buttonText: string;
+  };
+  menu: {
+    heading: string;
+    subheading: string;
+    image: SanityImage;
+    buttonText: string;
+  };
+};
+
 export type Section = HomeHeroSection | FooterSection | NewsletterFormSection | TuesdayPromoSection;

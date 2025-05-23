@@ -4,7 +4,7 @@ import SanityImageBlock from '../utility/SanityImageBlock';
 
 export default function MainPromo({ heading, subheading, image, buttonText = 'LEARN MORE' }: TuesdayPromoSection) {
   return (
-    <section className='relative mx-auto mb-4 max-w-[1800px] px-[10px]'>
+    <section className='relative mx-auto mb-[10px] max-w-[1800px] px-[10px] lg:mb-4'>
       <div className='relative w-full rounded-2xl'>
         <h2 className='absolute top-[50px] left-1/2 z-[1] -translate-x-1/2 text-[13px] leading-[100%] font-medium text-[#C5A288] lg:top-20 lg:text-[15px]'>
           {heading}
